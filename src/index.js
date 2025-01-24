@@ -16,12 +16,14 @@ class TicTacToe {
   }
 
   checkWinner() {
-    if (
-      this.board[0][0] === this.board[0][1] &&
-      this.board[0][1] === this.board[0][2] &&
-      this.board[0][0] !== ""
-    ) {
-      return "X";
+    for (let i = 0; i < 3; i++) {
+      if (
+        this.board[i][0] === this.board[i][1] &&
+        this.board[i][1] === this.board[i][2] &&
+        this.board[i][0] !== ""
+      ) {
+        return this.board[i][0];
+      }
     }
 
     return null;
