@@ -36,6 +36,21 @@ class TicTacToe {
         return this.board[0][i];
       }
     }
+    //win for diagonals
+    if (
+      this.board[0][0] === this.board[1][1] &&
+      this.board[1][1] === this.board[2][2] &&
+      this.board[0][0] !== ""
+    ) {
+      return this.board[0][0];
+    }
+    if (
+      this.board[0][2] === this.board[1][1] &&
+      this.board[1][1] === this.board[2][0] &&
+      this.board[0][2] !== ""
+    ) {
+      return this.board[0][2];
+    }
 
     return null;
   }

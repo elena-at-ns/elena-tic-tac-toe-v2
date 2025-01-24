@@ -47,4 +47,14 @@ describe("Index.js", () => {
     game.playTurn(2, 0, "X");
     expect(game.checkWinner()).toBe("X");
   });
+
+  test("detects a win in the first diagonal", () => {
+    const game = new TicTacToe();
+    game.playTurn(0, 0, "X");
+    game.playTurn(2, 1, "O");
+    game.playTurn(1, 1, "X");
+    game.playTurn(2, 0, "O");
+    game.playTurn(2, 2, "X");
+    expect(game.checkWinner()).toBe("X");
+  });
 });
