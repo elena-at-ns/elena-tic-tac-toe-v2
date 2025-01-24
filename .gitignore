@@ -1,0 +1,64 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+/cdk.out
+
+# dependencies
+/node_modules
+**/node_modules
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/.angular/cache
+/.sass-cache
+/connect.lock
+/coverage
+/coverage-all
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Openapi Generator
+**/__generated__/.openapi-generator/
+**/__generated__/.openapi-generator-ignore
+**/__generated__/.gitignore
+**/__generated__/.npmignore
+**/__generated__/git_push.sh
+**/__generated__/README.md
+
+# custom
+.eslintcache
+/.testresults
+**/.testresults
+**/src/accessibility-test-report
+/artifacts
+/coverage
+.angular
+.playwright/**/report
+smoketest-result.json
+
+.nx/*

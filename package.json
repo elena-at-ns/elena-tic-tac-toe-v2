@@ -1,0 +1,13 @@
+{
+  "name": "elena-tic-tac-to-v2",
+  "version": "1.0.0",
+  "description": "A template for a JavaScript application using Jest",
+  "main": "src/index.html",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^29.0.0"
+  }
+}
