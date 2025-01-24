@@ -57,4 +57,19 @@ describe("Index.js", () => {
     game.playTurn(2, 2, "X");
     expect(game.checkWinner()).toBe("X");
   });
+
+  test("detects a game draw", () => {
+    const game = new TicTacToe();
+    game.playTurn(0, 0, "X");
+    game.playTurn(0, 1, "O");
+    game.playTurn(0, 2, "X");
+    game.playTurn(1, 0, "X");
+    game.playTurn(1, 1, "X");
+    game.playTurn(1, 2, "O");
+    game.playTurn(2, 0, "O");
+    game.playTurn(2, 1, "X");
+    game.playTurn(2, 2, "O");
+    expect(game.isDraw()).toBe(true);
+    expect(game.checkWinner()).toBe(null);
+  });
 });

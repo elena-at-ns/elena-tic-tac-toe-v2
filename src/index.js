@@ -54,6 +54,12 @@ class TicTacToe {
 
     return null;
   }
+
+  isDraw() {
+    return (
+      this.board.flat().every((cell) => cell !== "") && !this.checkWinner()
+    );
+  }
 }
 
 module.exports = TicTacToe;
