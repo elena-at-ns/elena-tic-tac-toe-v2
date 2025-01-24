@@ -26,7 +26,7 @@ describe("Index.js", () => {
     expect(game.checkWinner()).toBe("X");
   });
 
-  test("test if either player is a winner when completing any row", () => {
+  test("if either player is a winner when completing any row", () => {
     const game = new TicTacToe();
     game.playTurn(1, 0, "X");
     game.playTurn(2, 0, "O");
@@ -36,5 +36,15 @@ describe("Index.js", () => {
     game.playTurn(2, 2, "O");
 
     expect(game.checkWinner()).toBe("O");
+  });
+
+  test("if either player is a winner when completing any column", () => {
+    const game = new TicTacToe();
+    game.playTurn(0, 0, "X");
+    game.playTurn(2, 1, "O");
+    game.playTurn(1, 0, "X");
+    game.playTurn(2, 2, "O");
+    game.playTurn(2, 0, "X");
+    expect(game.checkWinner()).toBe("X");
   });
 });
