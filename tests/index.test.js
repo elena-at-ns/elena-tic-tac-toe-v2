@@ -72,4 +72,12 @@ describe("Index.js", () => {
     expect(game.isDraw()).toBe(true);
     expect(game.checkWinner()).toBe(null);
   });
+
+  test("alternate between players until there is a winner or a draw", () => {
+    const game = new TicTacToe();
+    game.play();
+    const winner = game.checkWinner();
+    const isDraw = game.isDraw();
+    expect(winner || isDraw).toBeTruthy();
+  });
 });

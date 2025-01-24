@@ -60,6 +60,28 @@ class TicTacToe {
       this.board.flat().every((cell) => cell !== "") && !this.checkWinner()
     );
   }
+
+  togglePlayer() {
+    this.currentPlayer = this.currentPlayer === "X" ? "O" : "X";
+  }
+
+  play() {
+    while (!this.checkWinner() && !this.isDraw()) {
+      const { x, y } = this.getRandomEmptyCell();
+      this.playTurn(x, y, this.currentPlayer);
+      this.togglePlayer();
+    }
+  }
+
+  getRandomEmptyCell() {
+    const emptyCells = [];
+    for (let i = 0; i < 3; i++) {
+      for (let j = 0; j < 3; j++) {
+        if (this.board[i][j] === "") emptyCells.push({ x: i, y: j });
+      }
+    }
+    return emptyCells[Math.floor(Math.random() * emptyCells.length)];
+  }
 }
 
 module.exports = TicTacToe;
